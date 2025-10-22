@@ -1,0 +1,948 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    /*justify-content: center;
+    align-items: center;*/
+    flex-direction: column;
+    font-family: Poppins, sans-serif;
+}
+
+/* ----------NAVBAR---------- */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 0.5rem 2.5rem;
+    background-color: #F9DD7B;
+    color: #323031;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(249, 221, 123);
+    /* transparent white */
+    backdrop-filter: blur(10px);
+    /* blur background behind */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
+    /*border-bottom: 1px solid rgba(255, 255, 255, 0.3);*/
+
+    transition: transform 0.2s;
+    box-sizing: border-box;
+}
+
+.navbar.hidden {
+    transform: translateY(-64px);
+    /* move navbar out of view */
+}
+
+.SSlogo a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.SSlogo_image {
+    height: 28px;
+    width: 28px;
+}
+
+.SSlogo span {
+    font-family: "Red Rose", serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #263238;
+}
+
+.navbar_menulist {
+    display: flex;
+    gap: 4rem;
+
+}
+
+.navbar_menu_link:hover {
+    color: white;
+}
+
+li {
+    list-style: none;
+    /* padding: 0px 20px; */
+}
+
+li a {
+    color: #263238;
+    font-weight: 500;
+}
+
+.navbar_toggle {
+    display: none;
+}
+
+.SSlogo-downloadbutton {
+    padding: 12px 44px;
+    font-size: 16px;
+    color: white;
+    background-color: #263238;
+    border-radius: 50px;
+    border: 1px solid #263238;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.SSlogo-downloadbutton:hover {
+    background-color: white;
+    color: #263238;
+    border: 1px solid #263238;
+}
+
+/* ----------SECTION 1 - HERO---------- */
+
+.hero {
+    background-color: #F9DD7B;
+    color: #323031;
+    border-radius: 0 0 20px 20px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 12rem;
+    margin: 200px auto 100px auto;
+    text-align: center;
+}
+
+.hero-heading {
+    font-size: 40px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.2;
+}
+
+.hero-buttons {
+    display: inline-flex;
+    align-items: center;
+    gap: 64px;
+}
+
+.hero-downloadbutton {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 60px;
+    gap: 20px;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    border: 2px solid #263238;
+    background-color: #263238;
+    color: white;
+    line-height: 1.5;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease;
+}
+
+.hero-downloadbutton-buttontext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+
+}
+
+.hero-downloadbutton-downloadtext {
+    font-size: 12px;
+}
+
+.hero-downloadbutton-storetext {
+    font-size: 20px;
+}
+
+.hero-downloadbutton:hover {
+    background-color: white;
+    border: 2px solid #263238;
+    color: #263238;
+}
+
+.hero-downloadbutton:hover .hero-downloadbutton-svg {
+    fill: #263238;
+}
+
+.hero-image {
+    height: auto;
+    max-width: 100%;
+}
+
+/* ----------SECTION 2 - WHAT SS DO---------- */
+
+.whatSSdo {
+    background-color: white;
+    color: #323031;
+}
+
+.whatSSdo-content {
+    margin: 100px 0;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding: 0 12rem;
+}
+
+.whatSSdo-image {
+    height: auto;
+    width: 400px;
+}
+
+.h2-heading {
+    font-size: 32px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.2;
+}
+
+.whatSSdo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+/* ----------SECTION 3 - SS VIDEO---------- */
+
+.SSvideo {
+    background-color: #263238;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+.SSvideo-content {
+    margin: 100px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 12rem;
+}
+
+.SSvideo-video {
+    margin-top: 40px;
+    align-self: center;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+/* ----------SECTION 4 - HOW SS WORK---------- */
+
+.howSSwork {
+    margin: 100px 0px;
+    background-color: white;
+    color: #323031;
+}
+
+.howSSwork-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 40px;
+    padding: 0 12rem;
+}
+
+.howSSwork-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.howSSwork-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.howSSwork-1-texts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 360px;
+}
+
+.howSSwork-1-heading {
+    font-weight: 500;
+}
+
+.howSSwork-1-image {
+    width: 360px;
+    height: 100%;
+}
+
+.howSSwork-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.howSSwork-2-texts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 360px;
+}
+
+.howSSwork-2-heading {
+    font-weight: 500;
+}
+
+.howSSwork-2-image {
+    width: 360px;
+    height: 100%;
+}
+
+.howSSwork-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.howSSwork-3-texts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 360px;
+}
+
+.howSSwork-3-heading {
+    font-weight: 500;
+}
+
+.howSSwork-3-image {
+    width: 360px;
+    height: 100%;
+}
+
+/* ----------SECTION 5 - App feature 1---------- */
+
+.appfeature-1 {
+    padding: 60px 0;
+    background-color: #FCF0C6;
+    color: #323031;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.appfeature-1-content {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 0 0 12rem;
+}
+
+.appfeature-1-heading {
+    font-weight: 500;
+}
+
+.appfeature-1-image {
+    width: 50vw;
+    height: 100%;
+}
+
+/* ----------SECTION 6 - App feature 2---------- */
+
+.appfeature-2 {
+    padding: 60px 0;
+    background-color: #FCF0C6;
+    color: #323031;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.appfeature-2-content {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 12rem 0 0;
+}
+
+.appfeature-2-heading {
+    font-weight: 500;
+}
+
+.appfeature-2-image {
+    width: 50vw;
+    height: 100%;
+}
+
+/* ----------SECTION 7 - REVIEWS---------- */
+
+.SSreviews {
+    padding: 100px 0px;
+    background-color: #FBE7A1;
+    color: #323031;
+}
+
+.SSreviews-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 12rem;
+}
+
+.SSreviews-reviewbox {
+    padding: 40px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FCF0C6;
+    border-radius: 20px;
+}
+
+.SSreviews-reviewbox-image {
+    width: 72px;
+    height: 72px;
+}
+
+.SSreviews-reviewbox-name {
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.SSreviews-reviewbox-reviewtext {
+    margin-top: 20px;
+    font-style: italic;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ----------SECTION 8 - FOOTER---------- */
+
+.SSfooter {
+    background-color: #263238;
+    color: #ffffff;
+}
+
+.SSfooter-content {
+    padding: 0px 12rem;
+}
+
+.SSfooter-content-linkscontainer {
+    padding: 24px 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* allows wrapping to next line */
+    gap: 16px 8px;
+    /* spacing between spans */
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.SSfooter-content-links {
+    font-size: 14px;
+    width: 120px;
+}
+
+.SSfooter-content-socialanddownload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+
+}
+
+.SSfooter-content-social {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.SSfooter-content-social-svg {
+    cursor: pointer;
+}
+
+.SSfooter-content-copyrights {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+}
+
+.SSfooter-content-downloadbutton {
+    padding: 12px 44px;
+    font-size: 16px;
+    color: #263238;
+    background-color: white;
+    border-radius: 50px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.SSfooter-content-downloadbutton:hover {
+    background-color: #263238;
+    color: white;
+    border: 1px solid white;
+}
+
+
+/* === Tablet view (≤ 1150px) === */
+
+@media screen and (max-width: 1150px) {
+
+    /* ----------NAVBAR---------- */
+
+    .navbar_toggle {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .SSlogo-downloadbutton {
+        display: none;
+    }
+
+    .navbar_menu {
+        position: fixed;
+        top: 4rem;
+        left: 0;
+        right: -200%;
+        margin: 0 auto;
+        width: 50%;
+        background-color: #FCF0C6;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        padding: 2rem;
+        border-radius: 2rem;
+        border: 3px solid #F6CA30;
+        transition: right .4s;
+    }
+
+    .navbar_menulist {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .show_menu {
+        right: 0;
+    }
+
+    .navbar_menu_link:hover {
+        color: #F6CA30;
+    }
+
+    /* ----------SECTION 1 - HERO---------- */
+
+    .hero {
+        border-radius: 16px;
+    }
+
+    .hero-content {
+        padding: 0 8rem;
+    }
+
+    .hero-downloadbutton:active {
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ----------SECTION 2 - WHAT SS DO---------- */
+
+    .whatSSdo-content {
+        gap: 40px;
+        padding: 0 8rem;
+    }
+
+    .whatSSdo-image {
+        height: auto;
+        width: 360px;
+    }
+
+    /* ----------SECTION 3 - SS VIDEO---------- */
+
+    .SSvideo {
+        border-radius: 16px;
+    }
+
+    .SSvideo-content {
+        padding: 0 8rem;
+    }
+
+    /* ----------SECTION 4 - HOW SS WORK---------- */
+
+    .howSSwork-content {
+        padding: 0 8rem;
+    }
+
+    .howSSwork-steps {
+        gap: 60px;
+    }
+
+    .howSSwork-1 {
+        gap: 40px;
+    }
+
+    .howSSwork-1-texts {
+        gap: 12px;
+        width: 280px;
+    }
+
+    .howSSwork-1-heading {
+        font-weight: 500;
+    }
+
+    .howSSwork-1-image {
+        width: 280px;
+        height: 100%;
+    }
+
+    .howSSwork-2 {
+        gap: 40px;
+    }
+
+    .howSSwork-2-texts {
+        gap: 12px;
+        width: 280px;
+    }
+
+    .howSSwork-2-heading {
+        font-weight: 500;
+    }
+
+    .howSSwork-2-image {
+        width: 280px;
+        height: 100%;
+    }
+
+    .howSSwork-3 {
+        gap: 40px;
+    }
+
+    .howSSwork-3-texts {
+        gap: 12px;
+        width: 280px;
+    }
+
+    .howSSwork-3-heading {
+        font-weight: 500;
+    }
+
+    .howSSwork-3-image {
+        width: 280px;
+        height: 100%;
+    }
+
+    /* ----------SECTION 5 - App feature 1---------- */
+
+    .appfeature-1 {
+        padding: 24px 0;
+    }
+
+    .appfeature-1-content {
+        margin: 40px 0;
+        padding: 0 0 0 8rem;
+    }
+
+    /* ----------SECTION 6 - App feature 2---------- */
+
+    .appfeature-2 {
+        padding: 24px 0;
+    }
+
+    .appfeature-2-content {
+        margin: 40px 0;
+        padding: 0 8rem 0 0;
+    }
+
+    /* ----------SECTION 7 - REVIEWS---------- */
+
+    .SSreviews-content {
+        gap: 20px;
+        padding: 0 8rem;
+    }
+
+    .SSreviews-reviewbox {
+        padding: 40px 60px;
+    }
+
+    /* ----------SECTION 8 - FOOTER---------- */
+
+    .SSfooter-content {
+        padding: 0px 8rem;
+    }
+
+    .SSfooter-content-social {
+        gap: 16px;
+    }
+
+ 
+}
+
+
+/* === Mobile view (≤ 768px) === */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    /* ----------NAVBAR---------- */
+
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    /* ----------SECTION 1 - HERO---------- */
+
+    .hero-content {
+        gap: 32px;
+        padding: 0 2rem;
+        margin: 120px auto 60px auto;
+    }
+
+    .hero-heading {
+        font-size: 36px;
+        font-weight: 600;
+        font-style: normal;
+        line-height: 1.2;
+    }
+
+    .hero-buttons {
+        gap: 24px;
+    }
+
+    .hero-downloadbutton {
+        gap: 1rem;
+    }
+
+    .hero-downloadbutton-svg {
+        height: 24px;
+        width: 24px;
+    }
+
+    .hero-downloadbutton-buttontext {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.2;
+
+    }
+
+    .hero-downloadbutton-downloadtext {
+        font-size: 10px;
+    }
+
+    .hero-downloadbutton-storetext {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+    }
+
+    /* ----------SECTION 2 - WHAT SS DO---------- */
+
+    .whatSSdo-content {
+        gap: 32px;
+        padding: 0 2rem;
+        flex-direction: column-reverse;
+    }
+
+    .h2-heading {
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .whatSSdo-text {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+
+    .whatSSdo-content {
+        gap: 40px;
+        padding: 0 2rem;
+    }
+
+    .whatSSdo-image {
+        height: auto;
+        width: 320px;
+    }
+
+    /* ----------SECTION 3 - SS VIDEO---------- */
+
+    .SSvideo-content {
+        margin: 100px 0;
+        padding: 0 2rem;
+    }
+
+    .SSvideo-video {
+        width: 320px;
+        height: 180px;
+        margin-top: 20px;
+        border-radius: 16px;
+    }
+
+    /* ----------SECTION 4 - HOW SS WORK---------- */
+
+    .howSSwork-content {
+        padding: 0 2rem;
+    }
+
+    .howSSwork-steps {
+        gap: 60px;
+    }
+
+    .howSSwork-1 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .howSSwork-1-texts {
+        width: 280px;
+        gap: 12px;
+    }
+
+    .howSSwork-1-heading {
+        font-weight: 500;
+    }
+
+    .howSSwork-1-image {
+        width: 240px;
+        height: 100%;
+    }
+
+    .howSSwork-2 {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .howSSwork-2-texts {
+        width: 280px;
+        gap: 12px;
+    }
+
+    .howSSwork-2-heading {
+        font-weight: 500;
+    }
+
+    .howSSwork-2-image {
+        width: 240px;
+        height: 100%;
+    }
+
+    .howSSwork-3 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .howSSwork-3-texts {
+        width: 280px;
+        gap: 12px;
+    }
+
+    .howSSwork-3-heading {
+        font-weight: 500;
+    }
+
+    .howSSwork-3-image {
+        width: 240px;
+        height: 100%;
+    }
+
+    /* ----------SECTION 5 - App feature 1---------- */
+
+    .appfeature-1 {
+        padding: 20px 0;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .appfeature-1-content {
+        margin: 40px 0;
+        gap: 20px;
+        padding: 0 2rem;
+    }
+
+    .appfeature-1-image {
+        align-self: flex-end;
+        width: 95%;
+    }
+
+    /* ----------SECTION 6 - App feature 2---------- */
+
+    .appfeature-2 {
+        padding: 20px 0;
+        flex-direction: column-reverse;
+        gap: 0px;
+    }
+
+    .appfeature-2-content {
+        margin: 40px 0;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 2rem;
+    }
+
+    .appfeature-2-image {
+        align-self: flex-start;
+        width: 95%;
+    }
+
+    /* ----------SECTION 7 - Reviews---------- */
+
+    .SSreviews-content {
+        padding: 0 2rem;
+    }
+
+    .SSreviews-reviewbox {
+        padding: 40px 20px;
+    }
+
+    .SSreviews-reviewbox-image {
+        width: 64px;
+        height: 64px;
+    }
+
+       /* ----------SECTION 8 - FOOTER---------- */
+
+
+.SSfooter-content {
+    padding: 0px 2rem;
+}
+
+.SSfooter-content-socialanddownload {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.SSfooter-content-social {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.SSfooter-content-copyrights {
+    position: static;           /* remove absolute positioning */
+    transform: none;            /* reset the translation */
+    text-align: center;         /* optional: center text inside parent */
+    order: 3;                   /* optional: control order inside flex if needed */
+  }
+
+}
