@@ -91,7 +91,7 @@ li a {
     font-size: 16px;
     color: white;
     background-color: #263238;
-    border-radius: 50px;
+    border-radius: 8px;
     border: 1px solid #263238;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -118,7 +118,7 @@ li a {
     flex-direction: column;
     gap: 20px;
     padding: 0 12rem;
-    margin: 100px auto 100px auto;
+    margin: 120px auto 100px auto;
     text-align: center;
 }
 
@@ -486,7 +486,7 @@ li a {
     font-size: 16px;
     color: #263238;
     background-color: white;
-    border-radius: 50px;
+    border-radius: 8px;
     border: 1px solid white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -947,3 +947,4 @@ li a {
 
 
 }
+
